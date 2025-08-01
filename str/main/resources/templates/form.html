@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thông tin bệnh nhân</title>
+</head>
+<body>
+    <h2>Nhập thông tin bệnh nhân</h2>
+    <form th:action="@{/ketqua}" th:object="${benhNhan}" method="post">
+        Họ tên: <input type="text" th:field="*{hoTen}" /><br/>
+        Tuổi: <input type="number" th:field="*{tuoi}" /><br/>
+        Triệu chứng: <input type="text" th:field="*{trieuChung}" /><br/>
+        <button type="submit">Gửi</button>
+    </form>
+</body>
+</html>
